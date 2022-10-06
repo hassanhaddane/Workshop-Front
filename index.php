@@ -13,9 +13,6 @@
 require "header/header.php";
 ?>
 <?php
-require "content/content.php";
-?>
-<?php
 require "footer/footer.php";
 ?>
 </body>

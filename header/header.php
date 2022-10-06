@@ -20,14 +20,15 @@
                 <span class="line line3"></span>
             </div>
             <div class="logo">
-                <h1>DEMETERRE</h1>
+                <div alt="1" class="menuItem" ><a   href="/Workshop/index.php">DEMETERRE</a></div>
             </div>
             <div id="bar">
                 <div id="mymenu"></div>
-                <div alt="1" class="menuItem">Vigne</div>
-                <div alt="2" class="menuItem">Blé</div>
-                <div alt="3" class="menuItem">Example</div>
-                <div alt="4" class="menuItem">Example</div>
+                <div alt="2" class="menuItem" ><a   href="/content/vigne/vigne.php">Vigne</a></div>
+                <div alt="3" class="menuItem" ><a  href="/content/ble/ble.php">Blé</a></div>
+                <div alt="4" class="menuItem" ><a  href="/content/bovin/bovin.php">Bovin</a></div>
+                <div alt="5" class="menuItem" ><a  href="/content/porcin/porcin.php">Porcin</a></div>
+
             </div>
             <div class="menu-items">
                 <li><a href="#">Information Client</a></li>
