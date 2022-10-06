@@ -26,7 +26,7 @@ require_once '../../header/header.php'
 <div class="mycontent">
     <div class="champs">
         <h4>Champs</h4>
-        <a href="#modalA" class="modal-open">
+        <a href="/Workshop/content/vigne/champ1.php" class="modal-open">
             View Modal A
         </a>
         <a href="#modalB" class="modal-open">
@@ -41,7 +41,9 @@ require_once '../../header/header.php'
                  aria-describedby="modalA-description">
             <a href="#" class="modal-exit" title="close">&times;</a>
             <h1 id="modalA-title" class="modal-title">Champ 1</h1>
-            <p id="modalA-description" class="modal-description">Lots of fun things in here to see.</p>
+            <p id="modalA-description" class="modal-description">
+
+            </p>
         </section>
 
         <section class="modal bg--blue" role="dialog" id="modalB" aria-labelledby="modalB-title"
@@ -99,282 +101,7 @@ require_once '../../header/header.php'
         <p id="modalC-description" class="modal-description">Lots of fun things in here to see.</p>
     </section>
 </div>
-<div class="contentpage">
-    <h4>Part</h4>
-    <section class="modal bg--purple" role="dialog" id="modalG" aria-labelledby="modalA-title"
-             aria-describedby="modalA-description">
-        <a href="#" class="modal-exit" title="close">&times;</a>
-        <h1 id="modalA-title" class="modal-title">Part 1</h1>
-        <p id="modalA-description" class="modal-description">
 
-
-
-
-
-
-        <div class="container" id="wrapper">
-            <div class="container-fluid" id="current-weather">
-                <div class="row">
-
-                    <!-- Right panel -->
-                    <div class="col-md-4 col-sm-5">
-                        <h5><spam id="cityName"></spam>, <spam id="cityCode"></spam></h5>
-                        <h6 id="localDate"></h6>
-                        <h5 id="localTime"></h5>
-                        <a id="refreshButton" href="#"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i> Refresh</a>
-                    </div>
-
-                    <!-- Center panel -->
-                    <div class="col-md-5 col-sm-7" style="margin: 10px auto;padding:0;">
-                        <div class="row">
-                            <i class="wi" id ="main-icon" style="font-size: 85px;"></i>
-                            <div>
-                                <spam id="mainTemperature"></spam>
-                                <p id="tempDescription"></p>
-                            </div>
-                            <p style="font-size: 1.5rem;"><a href="#" class="active" id="celcius">°C</a> | <a href="#" id="farenheit">°F</a></p>
-                        </div>
-                    </div>
-
-                    <!-- Left panel -->
-                    <div class="col-xs-12 col-sm-12 col-md-3 row" style="text-align: right;">
-                        <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
-                            <h6>Humidity: <spam id="humidity"></spam>%</h6>
-                        </div>
-                        <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
-                            <h6>Wind: <spam id="wind"></spam> m/s</h6>
-                        </div>
-                        <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
-                            <h6>High: <spam id="mainTempHot"></spam>°</h6>
-                        </div>
-                        <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
-                            <h6>Low: <spam id="mainTempLow"></spam>°</h6>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="protocol-modal" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Due to weather api restrictions, data can only be shown via HTTP request.</p>
-                            <p>Sorry for the inconvenience.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 4 days forecast -->
-            <div class="container-fluid">
-                <div class="row" style="padding: 2px;">
-
-                    <!-- Day 1 -->
-                    <div class="col-md-3 col-sm-6 day-weather-box">
-                        <div class="col-sm-12 day-weather-inner-box">
-                            <div class="col-sm-8 forecast-main">
-                                <p id="forecast-day-1-name"></p>
-                                <div class="row">
-                                    <h5 id="forecast-day-1-main">°</h5>
-                                    <i class="wi forecast-icon" id="forecast-day-1-icon"></i>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 forecast-min-low">
-                                <p><spam class="high-temperature" id="forecast-day-1-ht"></spam></p>
-                                <p><spam class="low-temperature" id="forecast-day-1-lt"></spam></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Day 2 -->
-                    <div class="col-md-3 col-sm-6 day-weather-box">
-                        <div class="col-sm-12 day-weather-inner-box">
-                            <div class="col-sm-8 forecast-main">
-                                <p id="forecast-day-2-name"></p>
-                                <div class="row">
-                                    <h5 id="forecast-day-2-main">°</h5>
-                                    <i class="wi forecast-icon" id="forecast-day-2-icon"></i>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 forecast-min-low">
-                                <p><spam class="high-temperature" id="forecast-day-2-ht"></spam></p>
-                                <p><spam class="low-temperature" id="forecast-day-2-lt"></spam></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Day 3 -->
-                    <div class="col-md-3 col-sm-6 day-weather-box">
-                        <div class="col-sm-12 day-weather-inner-box">
-                            <div class="col-sm-8 forecast-main">
-                                <p id="forecast-day-3-name"></p>
-                                <div class="row">
-                                    <h5 id="forecast-day-3-main">°</h5>
-                                    <i class="wi forecast-icon" id="forecast-day-3-icon"></i>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 forecast-min-low">
-                                <p><spam class="high-temperature" id="forecast-day-3-ht"></spam></p>
-                                <p><spam class="low-temperature" id="forecast-day-3-lt"></spam></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Day 4 -->
-                    <div class="col-md-3 col-sm-6 day-weather-box">
-                        <div class="col-sm-12 day-weather-inner-box">
-                            <div class="col-sm-8 forecast-main">
-                                <p id="forecast-day-4-name"></p>
-                                <div class="row">
-                                    <h5 id="forecast-day-4-main">°</h5>
-                                    <i class="wi forecast-icon" id="forecast-day-4-icon"></i>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 forecast-min-low">
-                                <p><spam class="high-temperature" id="forecast-day-4-ht"></spam></p>
-                                <p><spam class="low-temperature" id="forecast-day-4-lt"></spam></p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-        <div class="compass">
-
-            <div id="rose" class="compass__rose">
-
-                <svg class="compass__rose__dial" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg">
-
-                    <circle cx="65" cy="65" r="56" stroke="white" stroke-width="1" fill="none" />
-                    <polyline points="63,9  67,9  65,13" fill="white"/>
-                    <polyline points="121,63  121,67  119,65" fill="white"/>
-                    <polyline points="63,121  67,121  65,119" fill="white"/>
-                    <polyline points="9,63  9,67  11,65" fill="white"/>
-
-                    <text x="65" y="4.2" font-size="5" text-anchor="middle" fill="white">N</text>
-                    <text x="127" y="67" font-size="5" text-anchor="middle" fill="white">E</text>
-                    <text x="65" y="129" font-size="5" text-anchor="middle" fill="white">S</text>
-                    <text x="2.8" y="67" font-size="5" text-anchor="middle" fill="white">W</text>
-
-                </svg>
-
-            </div>
-
-            <svg class="compass__pointer" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg">
-
-                <polyline points="60,60  70,60  65,15" fill="#b60000"/>
-                <polyline points="60,70  70,70  65,115" fill="white"/>
-                <circle cx="65" cy="65" r="7" stroke="#b60000" stroke-width="7" fill="none" />
-
-            </svg>
-<h4 color="white">sud</h4>
-        </div>
-
-
-
-
-
-        </p>
-    </section>
-
-    <section class="modal bg--blue" role="dialog" id="modalH" aria-labelledby="modalB-title"
-             aria-describedby="modalB-description">
-        <a href="#" class="modal-exit" title="close">&times;</a>
-        <h1 id="modalB-title" class="modal-title">Part 2</h1>
-        <p id="modalB-description" class="modal-description">Lots of fun things in here to see.</p>
-    </section>
-
-    <section class="modal bg--red" role="dialog" id="modalI" aria-labelledby="modalC-title"
-             aria-describedby="modalC-description">
-        <a href="#" class="modal-exit" title="close">&times;</a>
-        <h1 id="modalC-title" class="modal-title">Part 3</h1>
-        <p id="modalC-description" class="modal-description">Lots of fun things in here to see.</p>
-    </section>
-
-    <section class="modal bg--green" role="dialog" id="modalJ" aria-labelledby="modalD-title"
-             aria-describedby="modalD-description">
-        <a href="#" class="modal-exit" title="close">&times;</a>
-        <h1 id="modalD-title" class="modal-title">Part 4</h1>
-        <p id="modalD-description" class="modal-description">Lots of fun things in here to see.</p>
-    </section>
-
-    <section class="modal bg--purple" role="dialog" id="modalK" aria-labelledby="modalE-title"
-             aria-describedby="modalE-description">
-        <a href="#" class="modal-exit" title="close">&times;</a>
-        <h1 id="modalE-title" class="modal-title">Part 5</h1>
-        <p id="modalE-description" class="modal-description">Lots of fun things in here to see.</p>
-    </section>
-
-    <section class="modal bg--purple" role="dialog" id="modalL" aria-labelledby="modalE-title"
-             aria-describedby="modalE-description">
-        <a href="#" class="modal-exit" title="close">&times;</a>
-        <h1 id="modalE-title" class="modal-title">Part 6</h1>
-        <p id="modalE-description" class="modal-description">Lots of fun things in here to see.</p>
-    </section>
-
-    <section class="modal bg--purple" role="dialog" id="modalM" aria-labelledby="modalE-title"
-             aria-describedby="modalE-description">
-        <a href="#" class="modal-exit" title="close">&times;</a>
-        <h1 id="modalE-title" class="modal-title">Part 5</h1>
-        <p id="modalE-description" class="modal-description">Lots of fun things in here to see.</p>
-    </section>
-
-    <section class="modal bg--purple" role="dialog" id="modalN" aria-labelledby="modalE-title"
-             aria-describedby="modalE-description">
-        <a href="#" class="modal-exit" title="close">&times;</a>
-        <h1 id="modalE-title" class="modal-title">Part 6</h1>
-        <p id="modalE-description" class="modal-description">Lots of fun things in here to see.</p>
-    </section>
-
-    <main class="content">
-
-        <a href="#modalG" class="modal-open">
-            View Modal G
-        </a>
-        <a href="#modalH" class="modal-open">
-            View Modal H
-        </a>
-        <a href="#modalI" class="modal-open">
-            View Modal I
-        </a>
-        <a href="#modalJ" class="modal-open">
-            View Modal J
-        </a>
-
-        <a href="#modalK" class="modal-open">
-            View Modal K
-        </a>
-
-        <a href="#modalL" class="modal-open">
-            View Modal L
-        </a>
-
-        <a href="#modalK" class="modal-open">
-            View Modal M
-        </a>
-
-        <a href="#modalL" class="modal-open">
-            View Modal N
-        </a>
-
-    </main>
-</div>
 </div>
 </body>
 <style>@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -587,7 +314,7 @@ require_once '../../header/header.php'
         left: 500px;
         right: 0px;
         display: none;
-        /*opacity: 0;*/
+        opacity: 0;
         width: 50%;
         /* overflow: scroll
          */
@@ -596,7 +323,7 @@ require_once '../../header/header.php'
     .modal:target {
         display: block;
         z-index: 2;
-        /*opacity: 1;*/
+        opacity: 1;
     }
 
     .popup:target ~ .content {
@@ -638,15 +365,14 @@ require_once '../../header/header.php'
     .modal-open,
     .modal-open:hover {
         display: block;
-        /*width: 14em;*/
+        width: 16em;
         margin: 1em auto;
-        padding: 3em 2em;
+        padding: 1.5em 2em;
         border: 1px solid #806973;
         background-color: #FFF;
         font-size: 1em;
         text-align: center;
         text-decoration: none;
-        /*border-radius: 82%;*/
         color: #806973;
         box-shadow: 0 0 10px 1px #ccc;
     }
@@ -722,19 +448,20 @@ require_once '../../header/header.php'
 
     a {
         color: white;
+        opacity: 0.6;
         text-decoration: none;
     }
 
     a:hover, a:active, a:focus{
         color: white;
         text-decoration: none;
-        /*opacity: 1;*/
+        opacity: 1;
     }
 
     .active {
         color: white;
         text-decoration: none;
-        /*opacity: 1;*/
+        opacity: 1;
     }
 
     body{
@@ -827,13 +554,13 @@ require_once '../../header/header.php'
 
     .compass {
         position: relative;
-        width: 10%;
-        height: 10%;
+        width: 100%;
+        height: 100%;
         text-align: center;
         font-family: Muli, sans-serif;
         font-size: 16px;
         background-size: cover;
-        height: 10%;
+        height: 100%;
     }
 
     .compass__rose {
