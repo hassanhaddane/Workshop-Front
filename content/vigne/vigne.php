@@ -80,10 +80,207 @@ require_once '../../header/header.php'
 
 
 
+        <div class="container" id="wrapper">
+            <div class="container-fluid" id="current-weather">
+                <div class="row">
+
+                    <!-- Right panel -->
+                    <div class="col-md-4 col-sm-5">
+                        <h5><spam id="cityName"></spam>Cave 1<spam id="cityCode"></spam></h5>
+                        <style>
+                            .col-sm-5{
+                                font-size: 30px;
+                            }
+                        </style>
+                        <h6 id="localDate">10:15:36</h6>
+                        <h5 id="localTime"></h5>
+
+                    </div>
+
+                    <!-- Center panel -->
+                    <div class="col-md-5 col-sm-7" style="margin: 10px auto;padding:0;">
+                        <div class="row">
+                            <i class="wi" id ="main-icon" style="font-size: 85px;"></i>
+                            <div>
+                                <spam id="mainTemperature"></spam>
+                                <p id="tempDescription"></p>
+                            </div>
+                            <p style="font-size: 1.5rem;"><a href="#" class="active" id="celcius">11 °C</a> | <a href="#" id="farenheit">°F</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Left panel -->
+                    <div class="col-xs-12 col-sm-12 col-md-3 row" style="text-align: right;">
+                        <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+                            <h6>Obscurité: <spam id="humidity"></spam>99%</h6>
+                        </div>
+                        <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+                            <h6>Vibration: <spam id="wind"></spam>6m/s</h6>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <style>
+                .col-md-12{
+                    font-size: 30px;
+                }
+            </style>
+            <!-- Modal -->
+
+        </div>
 
 
 
 
+
+
+
+
+
+        <div id="wrapper">
+            <table id="keywords" cellspacing="0" cellpadding="0">
+                <thead>
+                <tr>
+                    <th><span>Type</span></th>
+                    <th><span>Numero</span></th>
+                    <th><span>Champs</span></th>
+                    <th><span>Emplacement</span></th>
+                    <th><span>Année</span></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="lalign">Blanc</td>
+                    <td>125</td>
+                    <td>Champ 1</td>
+                    <td>C2 L15</td>
+                    <td>2013</td>
+                </tr>
+                <tr>
+                    <td class="lalign">Rouge</td>
+                    <td>126</td>
+                    <td>Champ 1</td>
+                    <td>C8 L1</td>
+                    <td>2016</td>
+                </tr>
+                <tr>
+                    <td class="lalign">Blanc</td>
+                    <td>10</td>
+                    <td>Champ 2</td>
+                    <td>C8 L3</td>
+                    <td>1988</td>
+                </tr>
+                <tr>
+                    <td class="lalign">Blanc</td>
+                    <td>19</td>
+                    <td>Champ 2</td>
+                    <td>C3 L8</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td class="lalign">Rouge</td>
+                    <td>13</td>
+                    <td>Champ 1</td>
+                    <td>C5 L9</td>
+                    <td>2020</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <style>
+
+            br { display: block; line-height: 1.6em; }
+
+            article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+            ol, ul { list-style: none; }
+
+            input, textarea {
+                -webkit-font-smoothing: antialiased;
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                outline: none;
+            }
+
+            blockquote, q { quotes: none; }
+            blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+            strong, b { font-weight: bold; }
+
+            table { border-collapse: collapse; border-spacing: 0; }
+            img { border: 0; max-width: 100%; }
+
+            h1 {
+                font-family: 'Amarante', Tahoma, sans-serif;
+                font-weight: bold;
+                font-size: 3.6em;
+                line-height: 1.7em;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+
+            /** page structure **/
+            #wrapper {
+                background-color: #28688C;
+                box-shadow: 1px 5px 25px 3px #444;
+                border-radius: 10px;
+                margin: 30px auto;
+                max-width: 720px;
+                padding: 0px;
+                color: white;
+            }
+
+            #keywords {
+                margin: 0 auto;
+                font-size: 1.2em;
+                margin-bottom: 15px;
+            }
+
+
+            #keywords thead {
+                cursor: pointer;
+                background: #c9dff0;
+            }
+            #keywords thead tr th {
+                font-weight: bold;
+                padding: 9px 20px;
+                padding-left: 12px;
+            }
+            #keywords thead tr th span {
+                padding-right: 20px;
+                background-repeat: no-repeat;
+                background-position: 100% 100%;
+            }
+
+            #keywords thead tr th.headerSortUp, #keywords thead tr th.headerSortDown {
+                background: #acc8dd;
+            }
+
+            #keywords thead tr th.headerSortUp span {
+                background-image: url('https://i.imgur.com/SP99ZPJ.png');
+            }
+            #keywords thead tr th.headerSortDown span {
+                background-image: url('https://i.imgur.com/RkA9MBo.png');
+            }
+
+
+            #keywords tbody tr {
+                color: #ffffff;
+            }
+            #keywords tbody tr td {
+                text-align: center;
+                padding: 15px 10px;
+            }
+            #keywords tbody tr td.lalign {
+                text-align: left;
+            }
+        </style>
         </p>
     </section>
 
